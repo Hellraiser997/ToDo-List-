@@ -8,10 +8,13 @@ import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
 import ClearIcon from '@mui/icons-material/Clear';
 import { Paper } from '@mui/material';
+import EditarTarefa from './Edicao';
 
 export default function ListaItem({tarefa}) {
 
         return (
+            <div>
+            <EditarTarefa />
             <Paper>
           <ListItem
            
@@ -37,6 +40,7 @@ export default function ListaItem({tarefa}) {
             </ListItemButton>
           </ListItem>
             </Paper>
+            </div>
         );
 }
 
