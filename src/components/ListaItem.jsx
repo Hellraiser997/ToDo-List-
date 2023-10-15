@@ -12,7 +12,7 @@ export default function ListaItem() {
 
         return (
           <ListItem
-            key={value}
+           
             secondaryAction={
               <IconButton edge="end" aria-label="comments">
                 <CommentIcon />
@@ -20,17 +20,16 @@ export default function ListaItem() {
             }
             disablePadding
           >
-            <ListItemButton role={undefined} onClick={handleToggle(value)} dense>
+            <ListItemButton role={undefined} dense>
               <ListItemIcon>
                 <Checkbox
                   edge="start"
-                  checked={checked.indexOf(value) !== -1}
                   tabIndex={-1}
                   disableRipple
                   
                 />
               </ListItemIcon>
-              <ListItemText id={labelId} primary={`Line item ${value + 1}`} />
+              <ListItemText primary={`Line item`} />
             </ListItemButton>
           </ListItem>
         );
