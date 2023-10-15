@@ -17,8 +17,8 @@ export default function Home() {
         <Form adicionarTarefa={adicionarTarefa} />
         <List>
             {tarefas.map((tarefa) => (
-                <div>
-                    <ListaItem />
+                <div key={tarefa.id}>
+                    <ListaItem tarefa={tarefa} />
                 </div>
             ))}
         </List>
