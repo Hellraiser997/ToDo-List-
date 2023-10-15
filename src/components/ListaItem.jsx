@@ -6,16 +6,20 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
-import CommentIcon from '@mui/icons-material/Comment';
+import ClearIcon from '@mui/icons-material/Clear';
+import { Paper } from '@mui/material';
 
-export default function ListaItem() {
+export default function ListaItem({tarefa}) {
 
         return (
+            <Paper>
           <ListItem
            
             secondaryAction={
-              <IconButton edge="end" aria-label="comments">
-                <CommentIcon />
+              <IconButton 
+              edge="end" 
+              aria-label="comments">
+                <ClearIcon />
               </IconButton>
             }
             disablePadding
@@ -29,9 +33,10 @@ export default function ListaItem() {
                   
                 />
               </ListItemIcon>
-              <ListItemText primary={`Line item`} />
+              <ListItemText primary={tarefa.texto} />
             </ListItemButton>
           </ListItem>
+            </Paper>
         );
 }
 
