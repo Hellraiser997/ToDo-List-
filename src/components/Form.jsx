@@ -1,24 +1,17 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
 
-export default function BasicTextFields() {
+export default function Form() {
   return (
     <div>
-    <Box
-      component="form"
-      sx={{
-        '& > :not(style)': { m: 1, width: '25ch' },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-      <TextField id="filled-basic" label="Filled" variant="filled" />
-      <TextField id="standard-basic" label="Standard" variant="standard" />
-    </Box>
-    <Button variant="outlined">Outlined</Button>
-    </div>
-  );
+        <TextField 
+        id="filled-basic" 
+        label="Filled" 
+        variant="filled" />
+        <Button variant="outlined">Outlined</Button>
+     </div>    
+  )
 }
+
+
