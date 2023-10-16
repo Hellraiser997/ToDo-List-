@@ -30,7 +30,7 @@ export default function EditarTarefa({abrirCaixa, handleFechar, tarefa}) {
           />
         </DialogContent>
         <DialogActions>
-          <Button >Cancelar</Button>
+          <Button onClick={handleFechar}>Cancelar</Button>
           <Button >Editar</Button>
         </DialogActions>
       </Dialog>
