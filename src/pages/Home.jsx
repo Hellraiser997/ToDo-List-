@@ -12,18 +12,24 @@ export default function Home() {
         setTarefas([...tarefas, tarefa])
     }
 
-    const editarTarefa = (id, ) => {
-    setTarefas(tarefas.map(tarefa => tarefa.id === id ? {...
-    tarefa, isEditando: !tarefa.isEditando} : tarefa))
-    }
+    const editarTarefa = (id, textoEditado) => {
+        var tarefasArray = [...tarefas];
 
+        for (var i in tarefasArray) {
+            if (tarefasArray[i].id == id) {
+                tarefasArray[i] = textoEditado;
+            }
+        }
+
+        setTarefas(tarefasArray)
+    }
   return (
     <div>
         <Form adicionarTarefa={adicionarTarefa} />
         <List>
             {tarefas.map((tarefa) => (
                 <div key={tarefa.id}>
-                    <ListaItem tarefa={tarefa} />
+                    <ListaItem editarTarefa={editarTarefa} tarefa={tarefa} />
                 </div>
             ))}
         </List>
