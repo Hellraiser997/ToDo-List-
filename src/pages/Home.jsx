@@ -12,6 +12,11 @@ export default function Home() {
         setTarefas([...tarefas, tarefa])
     }
 
+    const editarTarefa = (id, ) => {
+    setTarefas(tarefas.map(tarefa => tarefa.id === id ? {...
+    tarefa, isEditando: !tarefa.isEditando} : tarefa))
+    }
+
   return (
     <div>
         <Form adicionarTarefa={adicionarTarefa} />
