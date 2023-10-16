@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -6,15 +6,24 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
-import ClearIcon from '@mui/icons-material/Clear';
+import EditNoteIcon from '@mui/icons-material/EditNote';
 import { Paper } from '@mui/material';
-import EditarTarefa from './Edicao';
+import EditarTarefa from './EditarTarefa';
 
 export default function ListaItem({tarefa}) {
 
+    const [abrirCaixa, setAbrirCaixa] = useState(false);
+
+    const handleFechar = () => {
+        setAbrirCaixa(!abrirCaixa);
+    }
+
         return (
             <div>
-            <EditarTarefa />
+            <EditarTarefa 
+            abrirCaixa={abrirCaixa}
+            handleFechar={handleFechar}
+            />
             <Paper>
           <ListItem
            
@@ -22,7 +31,7 @@ export default function ListaItem({tarefa}) {
               <IconButton 
               edge="end" 
               aria-label="comments">
-                <ClearIcon />
+                <EditNoteIcon />
               </IconButton>
             }
             disablePadding
@@ -36,7 +45,9 @@ export default function ListaItem({tarefa}) {
                   
                 />
               </ListItemIcon>
-              <ListItemText primary={tarefa.texto} />
+              <ListItemText 
+              primary={tarefa.texto} 
+              onClick={() => setAbrirCaixa(true)}/>
             </ListItemButton>
           </ListItem>
             </Paper>
