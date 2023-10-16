@@ -17,11 +17,18 @@ export default function Form({ adicionarTarefa }) {
         <TextField 
         onChange={(e) => setTexto(e.target.value)}
         id="filled-basic" 
-        label="Filled" 
+        label="Tarefa" 
         variant="filled" />
         <Button 
         variant="outlined" 
-        onClick={() => criarTarefa(texto)}>Outlined</Button>
+        onClick={() => criarTarefa(texto)}>Adicionar</Button>
+        <TextField 
+        id="filled-basic" 
+        label="Pesquisar Tarefa" 
+        variant="filled" />
+         <Button 
+        variant="outlined" 
+        onClick={() => criarTarefa(texto)}>Pesquisar</Button>
      </div>    
     </Paper>
   )
