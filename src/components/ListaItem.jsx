@@ -32,7 +32,8 @@ export default function ListaItem({tarefa, editarTarefa}) {
             secondaryAction={
               <IconButton 
               edge="end" 
-              aria-label="comments">
+              aria-label="comments"
+              onClick={() => setAbrirCaixa(true)}>
                 <EditNoteIcon />
               </IconButton>
             }
@@ -49,7 +50,7 @@ export default function ListaItem({tarefa, editarTarefa}) {
               </ListItemIcon>
               <ListItemText 
               primary={tarefa.texto} 
-              onClick={() => setAbrirCaixa(true)}/>
+              />
             </ListItemButton>
           </ListItem>
             </Paper>
