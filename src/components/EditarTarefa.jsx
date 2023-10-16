@@ -1,37 +1,32 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
-export default function EditarTarefa({abrirCaixa, handleFechar, tarefa}) {
-
+export default function EditarTarefa({abrirCaixa, handleFechar, tarefa, editarTarefa}) {
+  const [textoEditado, setTextoEditado] = useState(tarefa.texto)
+  const textHandler = () => {
+    editarTarefa(tarefa.id, textoEditado)
+    handleFechar();
+  }
 
   return (
       <Dialog open={abrirCaixa}
       onClose={handleFechar}>
         <DialogTitle>Editar tarefa</DialogTitle>
         <DialogContent>
-          <DialogContentText>
-           
-          </DialogContentText>
           <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Email Address"
-            type="email"
-            defaultValue={tarefa}
-            fullWidth
+            defaultValue={textoEditado}
+            onChange={ (e) => setTextoEditado(e.target.value)}
             variant="standard"
           />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleFechar}>Cancelar</Button>
-          <Button >Editar</Button>
+          <Button onClick={textHandler}>Editar</Button>
         </DialogActions>
       </Dialog>
   );
