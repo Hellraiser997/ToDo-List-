@@ -10,7 +10,7 @@ import EditNoteIcon from '@mui/icons-material/EditNote';
 import { Paper } from '@mui/material';
 import EditarTarefa from './EditarTarefa';
 
-export default function ListaItem({tarefa}) {
+export default function ListaItem({tarefa, editarTarefa}) {
 
     const [abrirCaixa, setAbrirCaixa] = useState(false);
 
@@ -23,6 +23,8 @@ export default function ListaItem({tarefa}) {
             <EditarTarefa 
             abrirCaixa={abrirCaixa}
             handleFechar={handleFechar}
+            editarTarefa={editarTarefa}
+            tarefa={tarefa}
             />
             <Paper>
           <ListItem
