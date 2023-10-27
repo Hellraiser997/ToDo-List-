@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Form from '../components/Form'
 import ListaItem from '../components/ListaItem'
-import { List } from '@mui/material';
+import { List, Paper, TextField } from '@mui/material';
 
 
 export default function Home() {
@@ -42,12 +42,20 @@ export default function Home() {
                 </div>
             ))}
         </List>
-        <input
+        <Paper> 
+        <TextField 
+        onChange={(e) => setBuscar(e.target.value)}
+        id="filled-basic" 
+        label="Tarefa"
+        variant="filled"
+        />
+        </Paper>
+
+        {/* <input
         type='text'
         placeholder='Filtrar tarefas'
         value={buscar}
-        onChange={(e) => setBuscar(e.target.value)}
-        />
+        /> */}
     </div>
   )
 }
