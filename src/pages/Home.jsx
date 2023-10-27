@@ -8,7 +8,6 @@ export default function Home() {
     const [tarefas, setTarefas] = useState([]);
 
     const adicionarTarefa = (tarefa) => {
-        console.log(tarefa)
         setTarefas([...tarefas, tarefa])
     }
 
@@ -16,11 +15,14 @@ export default function Home() {
         var tarefasArray = [...tarefas];
 
         for (var i in tarefasArray) {
-            if (tarefasArray[i].id == id) {
-                tarefasArray[i] = textoEditado;
+            if (tarefasArray.hasOwnProperty(i)) {
+                if (tarefasArray[i].id === id) {
+                    tarefasArray[i].texto = textoEditado;
+                }
             }
         }
 
+        // tarefas.splice(id, 1, {texto: textoEditado, id:id});
         setTarefas(tarefasArray)
     }
   return (
