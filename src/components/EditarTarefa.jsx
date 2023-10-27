@@ -6,7 +6,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 
-export default function EditarTarefa({abrirCaixa, handleFechar, tarefa, editarTarefa}) {
+export default function EditarTarefaCaixa({abrirCaixa, handleFechar, tarefa, editarTarefa}) {
   const [textoEditado, setTextoEditado] = useState(tarefa.texto)
   const textHandler = () => {
     editarTarefa(tarefa.id, textoEditado)
@@ -14,9 +14,10 @@ export default function EditarTarefa({abrirCaixa, handleFechar, tarefa, editarTa
   }
 
   return (
-      <Dialog open={abrirCaixa}
+      <Dialog 
+      open={abrirCaixa}
       onClose={handleFechar}>
-        <DialogTitle>Editar tarefa</DialogTitle>
+        <DialogTitle>{"Editar tarefa"}</DialogTitle>
         <DialogContent>
           <TextField
             defaultValue={textoEditado}
