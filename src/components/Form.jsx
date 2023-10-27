@@ -16,7 +16,7 @@ export default function Form({ adicionarTarefa }) {
   return (
     <Paper>
     <Container>
-        <TextField 
+        <TextField
         onChange={(e) => setTexto(e.target.value)}
         id="filled-basic" 
         label="Tarefa" 
@@ -24,13 +24,6 @@ export default function Form({ adicionarTarefa }) {
         <Button 
         variant="outlined" 
         onClick={() => criarTarefa(texto)}>Adicionar</Button>
-        {/* <TextField 
-        id="filled-basic" 
-        label="Pesquisar Tarefa" 
-        variant="filled" />
-         <Button 
-        variant="outlined" 
-        onClick={() => criarTarefa(texto)}>Pesquisar</Button> */}
      </Container>    
     </Paper>
   )
