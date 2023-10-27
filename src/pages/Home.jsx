@@ -8,9 +8,7 @@ export default function Home() {
     const [tarefas, setTarefas] = useState([]);
     const [buscar, setBuscar] = useState('')
 
-    console.log(tarefas)
     const tarefasFiltradas = tarefas.filter((task) => task.texto.includes(buscar));
-    console.log(tarefasFiltradas)
 
     const listaTarefas = tarefasFiltradas.length > 0 ? tarefasFiltradas : tarefas;
 
