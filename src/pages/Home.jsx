@@ -46,7 +46,7 @@ export default function Home() {
         <TextField 
         onChange={(e) => setBuscar(e.target.value)}
         id="filled-basic" 
-        label="Tarefa"
+        label="Filtrar tarefa"
         variant="filled"
         />
         </Paper>
