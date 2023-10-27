@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import { Button, Paper } from '@mui/material';
+import { Container } from './Form.styled';
 
 export default function Form({ adicionarTarefa }) {
     const [texto, setTexto] = useState(null);
@@ -14,7 +15,7 @@ export default function Form({ adicionarTarefa }) {
     }
   return (
     <Paper>
-    <div>
+    <Container>
         <TextField 
         onChange={(e) => setTexto(e.target.value)}
         id="filled-basic" 
@@ -30,7 +31,7 @@ export default function Form({ adicionarTarefa }) {
          <Button 
         variant="outlined" 
         onClick={() => criarTarefa(texto)}>Pesquisar</Button> */}
-     </div>    
+     </Container>    
     </Paper>
   )
 }
