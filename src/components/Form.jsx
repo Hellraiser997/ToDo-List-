@@ -10,6 +10,7 @@ export default function Form({ adicionarTarefa }) {
         const objetoTarefa = { texto: texto, id: id };
         setId(id + 1);
         adicionarTarefa(objetoTarefa);
+        document.getElementById("filled-basic").value = null
     }
   return (
     <Paper>
@@ -22,13 +23,13 @@ export default function Form({ adicionarTarefa }) {
         <Button 
         variant="outlined" 
         onClick={() => criarTarefa(texto)}>Adicionar</Button>
-        <TextField 
+        {/* <TextField 
         id="filled-basic" 
         label="Pesquisar Tarefa" 
         variant="filled" />
          <Button 
         variant="outlined" 
-        onClick={() => criarTarefa(texto)}>Pesquisar</Button>
+        onClick={() => criarTarefa(texto)}>Pesquisar</Button> */}
      </div>    
     </Paper>
   )
