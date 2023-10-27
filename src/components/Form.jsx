@@ -18,7 +18,7 @@ export default function Form({ adicionarTarefa }) {
         <TextField 
         onChange={(e) => setTexto(e.target.value)}
         id="filled-basic" 
-        label="Tarefa" 
+        label="Filtrar tarefa..." 
         variant="filled" />
         <Button 
         variant="outlined" 
