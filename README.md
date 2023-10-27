@@ -39,7 +39,7 @@ Pronto! Agora você pode navegar pelo projeto em sua máquina.
 
 6. Pressione "o" em seu terminal; isso fará com que o navegador seja aberto com o projeto
 
-7. Digite as tarefas desejadas e aperte "adicionar". Caso queira marcar uma como concluída, basta clicar na caixinha ao lado esquerdo. Caso queira editar, clique no ícone de edição à direita. Também pode pesquisar tarefas que quer encontrar na caixa ao lado da caixa de adição.
+7. Digite as tarefas desejadas e aperte "adicionar". Caso queira marcar uma como concluída, basta clicar na caixinha ao lado esquerdo. Caso queira editar, clique no ícone de edição à direita. Também pode pesquisar tarefas que quer encontrar no campo mais abaixo da lista e do campo de adição de tarefas.
 
 ## Links.
 
