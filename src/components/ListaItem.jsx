@@ -8,6 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import EditNoteIcon from '@mui/icons-material/EditNote';
 import { Paper } from '@mui/material';
 import EditarTarefaCaixa from './EditarTarefa';
+import { Container } from './ListaItem.styled';
 
 export default function ListaItem({tarefa, editarTarefa}) {
 
@@ -18,7 +19,7 @@ export default function ListaItem({tarefa, editarTarefa}) {
     }
 
         return (
-            <div>
+            <Container>
             <EditarTarefaCaixa
             abrirCaixa={abrirCaixa}
             handleFechar={handleFechar}
@@ -53,7 +54,7 @@ export default function ListaItem({tarefa, editarTarefa}) {
             </ListItemButton>
           </ListItem>
             </Paper>
-            </div>
+            </Container>
         );
 }
 
