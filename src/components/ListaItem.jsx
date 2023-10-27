@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -8,7 +7,7 @@ import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
 import EditNoteIcon from '@mui/icons-material/EditNote';
 import { Paper } from '@mui/material';
-import EditarTarefa from './EditarTarefa';
+import EditarTarefaCaixa from './EditarTarefa';
 
 export default function ListaItem({tarefa, editarTarefa}) {
 
@@ -20,7 +19,7 @@ export default function ListaItem({tarefa, editarTarefa}) {
 
         return (
             <div>
-            <EditarTarefa 
+            <EditarTarefaCaixa
             abrirCaixa={abrirCaixa}
             handleFechar={handleFechar}
             editarTarefa={editarTarefa}
@@ -49,7 +48,7 @@ export default function ListaItem({tarefa, editarTarefa}) {
                 />
               </ListItemIcon>
               <ListItemText 
-              primary={tarefa.texto} 
+              primary={tarefa.texto}
               />
             </ListItemButton>
           </ListItem>
